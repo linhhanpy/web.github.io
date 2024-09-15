@@ -1,16 +1,74 @@
-<!DOCTYPE html>  
-<html>  
-<head>  
-    <meta charset="UTF-8">  
-    <title>下载渗透黑客攻击工具</title>  
-</head>  
-<body>
-    <h1>下载渗透黑客攻击工具</h1>
-    <h3>常用指令：exit(退出)，Attack(DOS攻击)，Virus(操控木马病毒执行终端命令)</h3>
-    <a href="Penetration_Testing.exe" download="Penetration_Testing.exe">点击下载渗透工具</a>
-    <a href="virus.exe" download="virus.exe">点击下载配套测试病毒</a>
-</body>
-                                       
-</html>
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>下载渗透黑客攻击工具</title> 
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+   .buttons {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    button {
+      background-color: gray;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+
+   .content {
+      padding: 20px;
+      text-align: center;
+    }
+
+   .download-buttons {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="buttons">
+    <button id="productButton">产品product</button>
+    <button id="downloadButton">下载download</button>
+  </div>
+  <div class="content" id="productContent">
+    渗透黑客攻击工具\n常用指令：exit(退出)，Attack(DOS攻击)，Virus(操控木马病毒执行终端命令)。\n加入我们邮箱：lhh_88888888@qq.com
+  </div>
+  <div class="content download-buttons" id="downloadContent">
+    <a href="Penetration_Testing.exe" download><button>点击下载渗透工具0.1.0版本</button></a>
+    <a href="virus.exe" download><button>点击下载配套测试木马病毒0.1.0版本</button></a>
+  </div>
+
+  <script>
+    const productButton = document.getElementById('productButton');
+    const downloadButton = document.getElementById('downloadButton');
+    const productContent = document.getElementById('productContent');
+    const downloadContent = document.getElementById('downloadContent');
+
+    productButton.addEventListener('click', function () {
+      productContent.style.display = 'block';
+      downloadContent.style.display = 'none';
+    });
+
+    downloadButton.addEventListener('click', function () {
+      productContent.style.display = 'none';
+      downloadContent.style.display = 'block';
+    });
+  </script>
+</body>
+
+</html>
                                         
